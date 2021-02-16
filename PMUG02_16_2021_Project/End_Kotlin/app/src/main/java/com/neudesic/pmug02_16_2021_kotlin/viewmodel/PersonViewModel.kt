@@ -29,10 +29,6 @@ class PersonViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    companion object {
-        private val executor = Executors.newFixedThreadPool(4)
-    }
-
     init {
 
         //instantiate the room database here

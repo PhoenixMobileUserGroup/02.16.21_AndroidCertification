@@ -7,11 +7,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.neudesic.pmug02_16_2021_kotlin.model.Person
 
-class PersonRecycler(private val people: List<Person>): RecyclerView.Adapter<PersonRecycler.PersonViewHolder>() {
+class PersonAdapter(private var people: List<Person>): RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
         return PersonViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.item_view_person, parent, false)
+                LayoutInflater.from(parent.context).inflate(R.layout.item_view_person, parent, false)
         )
     }
 
@@ -31,5 +31,9 @@ class PersonRecycler(private val people: List<Person>): RecyclerView.Adapter<Per
         var age: TextView = itemView.findViewById(R.id.age)
         var birthDate: TextView = itemView.findViewById(R.id.birthdate)
 
+    }
+
+    fun update(people: List<Person>) {
+        this.people = people
     }
 }

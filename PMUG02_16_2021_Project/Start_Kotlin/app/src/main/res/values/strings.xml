@@ -10,4 +10,5 @@
     <string name="start_a_job_for_1_minute">Start a job for 1 minute</string>
     <string name="start_a_periodic_job_every_minute">Start a periodic job every minute</string>
     <string name="navigate_to_new_activity">Navigate to new activity</string>
+    <string name="cancel_work">Cancel work</string>
 </resources>

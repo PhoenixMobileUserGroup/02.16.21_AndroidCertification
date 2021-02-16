@@ -67,14 +67,13 @@ class MainActivity : AppCompatActivity() {
             WorkManager.getInstance(this).enqueue(workRequest)
         }
 
-        //Start a periodic job that fires off every minute -- have it show a notification and write to logcat
+        //Start a periodic job that fires off every 15 minutes -- have it show a notification and write to logcat
         val periodicJob = findViewById<Button>(R.id.action_start_periodic_job)
         periodicJob.setOnClickListener {
             val workRequest =
-                PeriodicWorkRequest.Builder(PeriodicWorker::class.java, 1, TimeUnit.MINUTES).build()
+                PeriodicWorkRequest.Builder(PeriodicWorker::class.java, 15, TimeUnit.MINUTES).build()
             WorkManager.getInstance(this)
                 .enqueueUniquePeriodicWork("MyWork", ExistingPeriodicWorkPolicy.KEEP, workRequest)
-
         }
 
         val cancelWork = findViewById<Button>(R.id.action_cancel_Work)

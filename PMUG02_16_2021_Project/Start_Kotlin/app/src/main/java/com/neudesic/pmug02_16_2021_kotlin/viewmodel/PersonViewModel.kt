@@ -15,4 +15,8 @@ class PersonViewModel(app: Application) : AndroidViewModel(app) {
         //instantiate the room database here
     }
 
+    fun addPerson(name: String, age: Int, birthday: String) {
+
+    }
+
 }

@@ -13,8 +13,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
 
         //set a clicklistener to show a toast when this specific button is clicked
         val showToast = findViewById<Button>(R.id.action_show_toast)

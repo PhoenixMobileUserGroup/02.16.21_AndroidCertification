@@ -15,9 +15,9 @@ import com.neudesic.pmug02_16_2021_kotlin.model.Person
 import com.neudesic.pmug02_16_2021_kotlin.viewmodel.PersonViewModel
 
 class SecondActivity : AppCompatActivity() {
-    var recyclerView: RecyclerView? = null
-    var adapter: PersonAdapter? = null
-    var floatingActionButton: FloatingActionButton? = null
+    private lateinit var recyclerView: RecyclerView
+    private var adapter: PersonAdapter? = null
+    private lateinit var floatingActionButton: FloatingActionButton
 
     var viewModel: PersonViewModel? = null
 
@@ -26,7 +26,7 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
         recyclerView = findViewById(R.id.recycler)
         floatingActionButton = findViewById(R.id.fab)
-        floatingActionButton!!.setOnClickListener { v: View? ->
+        floatingActionButton.setOnClickListener { v: View? ->
             val intent = Intent(this, AddPersonActivity::class.java)
             startActivity(intent)
         }
@@ -44,8 +44,8 @@ class SecondActivity : AppCompatActivity() {
     private fun onDataReceived(people: List<Person>) {
         if (adapter == null) {
             adapter = PersonAdapter(people)
-            recyclerView!!.layoutManager = LinearLayoutManager(this)
-            recyclerView!!.adapter = adapter
+            recyclerView.layoutManager = LinearLayoutManager(this)
+            recyclerView.adapter = adapter
         } else {
             adapter!!.update(people)
             adapter!!.notifyDataSetChanged()
