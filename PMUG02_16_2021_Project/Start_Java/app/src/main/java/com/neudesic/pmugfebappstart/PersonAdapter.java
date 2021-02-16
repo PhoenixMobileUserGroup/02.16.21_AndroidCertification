@@ -12,11 +12,11 @@ import com.neudesic.pmugfebappstart.model.Person;
 
 import java.util.List;
 
-public class PersonRecycler extends RecyclerView.Adapter<PersonRecycler.PersonViewHolder> {
+public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonViewHolder> {
 
     private List<Person> people;
 
-    public PersonRecycler(List<Person> people) {
+    public PersonAdapter(List<Person> people) {
         this.people = people;
     }
 
@@ -31,7 +31,7 @@ public class PersonRecycler extends RecyclerView.Adapter<PersonRecycler.PersonVi
         Person person = people.get(position);
 
         holder.name.setText(person.getName());
-        holder.age.setText(person.getAge());
+        holder.age.setText(Integer.toString(person.getAge()));
         holder.birthDate.setText(person.getBirthday().toString());
 
     }
@@ -52,5 +52,9 @@ public class PersonRecycler extends RecyclerView.Adapter<PersonRecycler.PersonVi
             age = itemView.findViewById(R.id.age);
             birthDate = itemView.findViewById(R.id.birthdate);
         }
+    }
+
+    public void update(List<Person> people) {
+        this.people = people;
     }
 }

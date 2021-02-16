@@ -12,7 +12,7 @@ import com.neudesic.pmugfebappstart.model.Person;
 import java.util.List;
 
 public class PersonViewModel extends AndroidViewModel {
-    private final MutableLiveData<List<Person>> personsData = new MutableLiveData<>();
+    private final LiveData<List<Person>> personsData = new MutableLiveData<>();
 
     public PersonViewModel(@NonNull Application application) {
         super(application);
@@ -22,5 +22,9 @@ public class PersonViewModel extends AndroidViewModel {
 
     public LiveData<List<Person>> getData() {
         return personsData;
+    }
+
+    public void addPerson(String name, int age, String birthday) {
+        //add method
     }
 }
