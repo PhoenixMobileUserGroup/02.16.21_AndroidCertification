@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PMUGFebApp_Start_Java</string>
+    <string name="app_name">PMUGFebApp_End_Kotlin</string>
     <string name="action_settings">Settings</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
