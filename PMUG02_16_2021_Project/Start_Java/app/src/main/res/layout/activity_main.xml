@@ -78,6 +78,15 @@
             android:paddingBottom="8dp"
             android:text="@string/start_a_periodic_job_every_minute" />
 
+        <Button
+            android:id="@+id/action_navigate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/navigate_to_new_activity" />
+
     </LinearLayout>
 
 

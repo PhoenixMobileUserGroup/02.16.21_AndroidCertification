@@ -1,5 +1,6 @@
 package com.neudesic.pmugfebappstart;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
         Button periodicJob = findViewById(R.id.action_start_periodic_job);
         periodicJob.setOnClickListener(v -> {
             //TODO start a periodic job
+        });
+
+        Button navigate = findViewById(R.id.action_navigate);
+        navigate.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SecondActivity.class);
+            startActivity(intent);
         });
     }
 

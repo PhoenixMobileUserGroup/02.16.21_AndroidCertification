@@ -13,6 +13,7 @@ public class Person {
         this.birthday = birthday;
     }
 
+
     public void setAge(int age) {
         this.age = age;
     }
@@ -23,5 +24,17 @@ public class Person {
 
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
     }
 }

@@ -1,5 +1,6 @@
 package com.neudesic.pmug02_16_2021_kotlin
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -44,6 +45,12 @@ class MainActivity : AppCompatActivity() {
         val periodicJob = findViewById<Button>(R.id.action_start_periodic_job)
         periodicJob.setOnClickListener {
             //TODO start a periodic job
+        }
+
+        val navigate = findViewById<Button>(R.id.action_navigate)
+        navigate.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
     }
 
